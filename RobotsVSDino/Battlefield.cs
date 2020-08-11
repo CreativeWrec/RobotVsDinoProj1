@@ -20,7 +20,7 @@ namespace RobotsVSDino
 
         public void Battle()
         {
-            while (fleet.robots[0].robotHealth > 0)
+            while (fleet.robots.Count > 0 && herd.dinosaurs.Count > 0)
             {
 
                 fleet.robots[0].Attack(herd.dinosaurs[0]);
@@ -29,10 +29,20 @@ namespace RobotsVSDino
                     herd.dinosaurs.RemoveAt(0);
                 }
 
-                if (fleet.robots.Count > 0)
+                if (herd.dinosaurs.Count > 0)
+                {
                     herd.dinosaurs[0].Attack(fleet.robots[0]);
 
+                    // if robot dies, remove it from list
+                    fleet.robots.RemoveAt(0);
+                }
+                // else (fleet.robots[0] && herd.dinosaurs[0])    
+
             }
+
+
         }
+
+
     }
 }

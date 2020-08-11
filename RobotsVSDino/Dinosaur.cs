@@ -16,7 +16,7 @@ namespace Dino_Vs_Robots
         {
             Random rng = new Random();
             type = AskForDinoType();
-            dinoHealth = 100;
+            dinoHealth = 1;
             energy = 100;
             attackPower = rng.Next(minValue: 1, maxValue: 25);
 

@@ -16,7 +16,7 @@ namespace Dino_Vs_Robots
         {
             Random rng = new Random();
             this.name = AskForRobotName();
-            this.robotHealth = 100;
+            this.robotHealth = 1;
             this.powerLevel = 100;
             this.weapon = new Weapon();
         }
